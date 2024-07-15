@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 1512px;
+  display: flex;
+  padding: 15px 50px 15px 24px;
+  justify-content: space-between;
+}
+
+.headerLogoInputs {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerInputs {
+  display: flex;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.headerSettings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.SingUp {
+  background-color: #00798a;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.language,
+.LogIn {
+  text-decoration: none;
+  color: #212121;
+}
+
+.headerInputs {
+  width: 100%;
+  max-width: 600px;
+}
+
+.headerLogoInputs {
+  width: 100%;
+  max-width: 750px;
+}
+
+.searchEvents,
+.searchCity {
+  width: 100%;
+  height: 42px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchEvents {
+  padding: 10px;
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid #d9d9d9;
+  border-right: none;
+}
+
+.inputCityContainer {
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+}
+
+.searchIconCity {
+  width: 20px;
+  height: 20px;
+}
+
+.searchIconEvnts {
+  width: 22px;
+  height: 22px;
+}
+
+.searchIconEvnts {
+  margin-right: 5px;
+  order: -1;
+}
+
+.searchIconCityContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 42px;
+  height: 100%;
+  border-radius: 0px 8px 8px 0px;
+  padding: 11px;
+  background-color: #f65858;
+}
+
+.inputEvents,
+.inputCity {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #707070;
+}
