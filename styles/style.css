@@ -13,6 +13,7 @@ body {
   align-items: center;
 }
 
+/*===========================START HEADER===========================*/
 header {
   width: 100%;
   max-width: 1512px;
@@ -155,12 +156,15 @@ header {
   color: #000000;
 }
 
+/*===========================END HEADER===========================*/
+/*====================START PEOPLEPLATFORMSECTION=================*/
+
 main {
   padding: 0px 158px 0px 158px;
   width: 100%;
 }
 
-.peoplePlatform {
+.peoplePlatformSection {
   display: flex;
   padding: 71px 0px 98.5px 0px;
 }
@@ -194,3 +198,163 @@ main {
   max-width: 379px;
   padding-left: 55px;
 }
+
+/*====================END PEOPLEPLATFORMSECTION=================*/
+/*====================START EVENTSNEARSECTION===================*/
+.eventsNearSection {
+  padding: 24px 0 40px 0;
+}
+
+.eventNearTitleContainer {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eventsNearTitle {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventsNearTitle h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.cityEvent {
+  display: flex;
+  position: relative;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.cityEvent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #97cad1;
+  opacity: 0.12;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.cityEvent img {
+  width: 22px;
+  height: 22px;
+}
+
+.cityEvent p {
+  font-weight: 600px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #00798a;
+}
+
+.eventNearTitleContainer a {
+  color: #00798a;
+  font-weight: 500;
+  font-size: 16;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.eventNearCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.eventNearRow1CardsContainer,
+.eventNearRow2CardsContainer {
+  display: flex;
+  gap: 32px;
+}
+
+.eventNearCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 74px;
+  width: 100%;
+}
+
+.textCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 256px;
+}
+
+.eventNearCard img {
+  max-width: 272px;
+  width: 100%;
+}
+
+.eventNearCard h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #212121;
+}
+
+.eventTypeandLocation {
+  color: #707070;
+  font-size: 14;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.eventTime {
+  display: flex;
+  gap: 6px;
+}
+
+.eventTime p {
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.eventTime img {
+  width: 20px;
+  height: 20px;
+}
+
+.eventEntryAndVisit {
+  display: flex;
+  gap: 15px;
+}
+
+.eventVisit,
+.eventEntry {
+  display: flex;
+  gap: 5px;
+}
+
+.eventVisit p,
+.eventEntry p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #212121;
+}
+
+.eventVisit img,
+.eventEntry img {
+  width: 20px;
+  height: 20px;
+}
+/*====================END EVENTSNEARSECTION===================*/
