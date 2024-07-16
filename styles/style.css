@@ -48,7 +48,7 @@ header {
   gap: 4px;
 }
 
-.SingUp,
+.singUpHeader,
 .joinMeetup {
   background-color: #00798a;
   color: #ffffff;
@@ -58,11 +58,12 @@ header {
   font-weight: medium;
 }
 
-.SingUp {
+.singUpHeader {
   font-weight: medium;
   font-size: 14px;
   line-height: 20px;
   width: 83px;
+  height: 36px;
 }
 
 .joinMeetup {
@@ -70,6 +71,7 @@ header {
   font-size: 16px;
   line-height: 24px;
   width: 125px;
+  height: 40px;
 }
 
 .language,
@@ -202,6 +204,8 @@ main {
 /*====================END PEOPLEPLATFORMSECTION=================*/
 /*====================START EVENTSNEARSECTION===================*/
 .eventsNearSection {
+  display: flex;
+  flex-direction: column;
   padding: 24px 0 40px 0;
 }
 
@@ -262,7 +266,8 @@ main {
   color: #00798a;
 }
 
-.eventNearTitleContainer a {
+.eventNearTitleContainer a,
+.eventOnlineTitleContainer a {
   color: #00798a;
   font-weight: 500;
   font-size: 16;
@@ -270,19 +275,22 @@ main {
   text-decoration: none;
 }
 
-.eventNearCardsContainer {
+.eventNearCardsContainer,
+.eventOnlineCardsContainer {
   display: flex;
   flex-direction: column;
   gap: 36px;
 }
 
 .eventNearRow1CardsContainer,
-.eventNearRow2CardsContainer {
+.eventNearRow2CardsContainer,
+.eventOnlineNearRow1CardsContainer {
   display: flex;
   gap: 32px;
 }
 
-.eventNearCard {
+.eventNearCard,
+.eventOnlineNearCard {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -358,3 +366,80 @@ main {
   height: 20px;
 }
 /*====================END EVENTSNEARSECTION===================*/
+/*====================START EVENTONLINESECTION================*/
+.eventsOnlineSection {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+.eventOnlineTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.eventOnlineTitleContainer h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+/*====================END EVENTONLINESECTION================*/
+/*====================START JOINMEETUPSECTION===============*/
+.joinMeetupSection {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+}
+
+.joinMeetupContainer {
+  display: flex;
+  padding: 36px 56px 36px 56px;
+}
+
+.joinMeetupContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.joinMeetupContentContainer h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.joinMeetupContentContainer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+}
+
+.singUpMeetup {
+  background-color: #e32359;
+  color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  width: 192px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+}
+
+.joinMeetupContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #97cad1;
+  opacity: 0.12;
+  border-radius: 8px;
+  z-index: -1;
+}
