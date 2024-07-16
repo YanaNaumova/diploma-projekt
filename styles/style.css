@@ -424,7 +424,6 @@ main {
   display: flex;
   flex-direction: column;
   padding: 64px 0 64px 0;
-  border: 1px solid black;
   gap: 24px;
 }
 
@@ -470,3 +469,58 @@ main {
   color: #212121;
 }
 /*====================END TOPCATEGORIESSECTION==========*/
+/*==============START POPULARCITIESONMEETUPSECTION======*/
+.popularCitiesOnMeetupSection {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 64px;
+}
+
+.popularCitiesOnMeetupTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popularCitiesOnMeetupTitleContainer h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.popularCitiesOnMeetupTitleContainer p {
+  color: #707070;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.popularCitiesOnMeetupImageContainers {
+  display: flex;
+  gap: 42px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popularCitiesOnMeetupImageContainer {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popularCitiesOnMeetupImageContainer p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #212121;
+}
+
+.popularCitiesOnMeetupImageContainer img {
+  max-width: 205px;
+  width: 100%;
+}
+/*==============END POPULARCITIESONMEETUPSECTION=========*/
