@@ -198,6 +198,7 @@ main {
 
 .peoplePlatformImage img {
   max-width: 379px;
+  width: 100%;
   padding-left: 55px;
 }
 
@@ -379,7 +380,7 @@ main {
 .joinMeetupSection {
   display: flex;
   padding: 36px 56px 36px 56px;
-  gap: 75px;
+  gap: 70px;
   border-radius: 8px;
   background-color: rgba(151, 202, 209, 0.08);
 }
@@ -388,6 +389,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 65%;
 }
 
 .joinMeetupContentContainer h2 {
@@ -418,6 +420,14 @@ main {
   border: none;
 }
 
+.joinMeetupImageContainer img {
+  max-width: 341px;
+  width: 100%;
+}
+
+.joinMeetupImageContainer {
+  width: 35%;
+}
 /*====================END JOINMEETUPSECTION===============*/
 /*====================START TOPCATEGORIESSECTION==========*/
 .topCategoriesSection {
@@ -524,3 +534,135 @@ main {
   width: 100%;
 }
 /*==============END POPULARCITIESONMEETUPSECTION=========*/
+/*==============START MEETUPWORKSSECTION==============*/
+.meetupWorksSection {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 64px;
+  gap: 24px;
+}
+
+.meetupWorksSection h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.discoverEventandGroupsContainer,
+.startGroupContainer {
+  display: flex;
+  gap: 24px;
+  padding: 32px 0 24px 24px;
+  background-color: rgba(151, 202, 209, 0.12);
+  border-radius: 8px;
+  width: 50%;
+}
+
+.discoverEventandGroupsContainer img,
+.startGroupContainer img {
+  width: 41px;
+  height: 41px;
+}
+
+.discoverEventandGroupsContent,
+.startGroupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+}
+
+.discoverEventandGroupsContent h3,
+.startGroupContent h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #212121;
+}
+
+.discoverEventandGroupsContent p,
+.startGroupContent p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+}
+
+.discoverEventandGroupsContent a,
+.startGroupContent a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00798a;
+  text-decoration: none;
+}
+
+.groupsContainer {
+  display: flex;
+  gap: 32px;
+}
+/*==============END MEETUPWORKSSECTION==============*/
+
+.friendshipsSection {
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.frendshipTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 880px;
+}
+
+.frendshipTitleContainer h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.frendshipTitleContainer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+}
+
+.frendshipsCards {
+  display: flex;
+  gap: 32px;
+}
+
+.frendshipsCards img {
+  max-width: 376px;
+  width: 100%;
+}
+
+.frendshipsCard h3 {
+  margin-top: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #212121;
+}
+
+.frendshipsCard p {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  color: #707070;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.frendshipsCard a {
+  color: #00798a;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
