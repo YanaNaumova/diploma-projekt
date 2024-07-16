@@ -239,19 +239,7 @@ main {
   padding: 12px;
   border-radius: 8px;
   background-color: transparent;
-}
-
-.cityEvent::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #97cad1;
-  opacity: 0.12;
-  border-radius: 8px;
-  z-index: -1;
+  background-color: rgba(151, 202, 209, 0.12);
 }
 
 .cityEvent img {
@@ -305,12 +293,14 @@ main {
   max-width: 256px;
 }
 
-.eventNearCard img {
+.eventNearCard img,
+.eventOnlineNearCard img {
   max-width: 272px;
   width: 100%;
 }
 
-.eventNearCard h3 {
+.eventNearCard h3,
+.eventOnlineNearCard h3 {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
@@ -387,14 +377,11 @@ main {
 /*====================END EVENTONLINESECTION================*/
 /*====================START JOINMEETUPSECTION===============*/
 .joinMeetupSection {
-  position: relative;
-  display: flex;
-  border: 1px solid black;
-}
-
-.joinMeetupContainer {
   display: flex;
   padding: 36px 56px 36px 56px;
+  gap: 75px;
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.08);
 }
 
 .joinMeetupContentContainer {
@@ -431,15 +418,55 @@ main {
   border: none;
 }
 
-.joinMeetupContainer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #97cad1;
-  opacity: 0.12;
-  border-radius: 8px;
-  z-index: -1;
+/*====================END JOINMEETUPSECTION===============*/
+/*====================START TOPCATEGORIESSECTION==========*/
+.topCategoriesSection {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0 64px 0;
+  border: 1px solid black;
+  gap: 24px;
 }
+
+.topCategoriesTeitleContainer h2 {
+  display: flex;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.topCategoriesContentContainer {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.topCategoriContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px 20px 16px 20px;
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.08);
+  flex: 1 1 135px;
+  min-width: 135px;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+
+.topCategoriContainer img {
+  width: 20px;
+  height: 20px;
+}
+
+.topCategoriContainer p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+}
+/*====================END TOPCATEGORIESSECTION==========*/
