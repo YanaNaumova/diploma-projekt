@@ -603,7 +603,7 @@ main {
   gap: 32px;
 }
 /*==============END MEETUPWORKSSECTION==============*/
-
+/*==============START FRIENDSHIPSSECTION============*/
 .friendshipsSection {
   padding-bottom: 64px;
   display: flex;
@@ -665,4 +665,133 @@ main {
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
+}
+/*==============END FRIENDSHIPSSECTION============*/
+/*=================START FOOTER===================*/
+footer {
+  width: 100%;
+  max-width: 1512px;
+  display: flex;
+  padding: 24px 158px 40px 158px;
+  background-color: #212121;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.createMeetupGroup {
+  display: flex;
+  gap: 40px;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 24px;
+}
+
+.createMeetupGroup p {
+  color: #f6f7f8;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.getStartet {
+  color: #ffffff;
+  border-radius: 6px;
+  border: 2px solid white;
+  padding: 10px 14px 10px 14px;
+  background-color: #212121;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contentFooter {
+  display: flex;
+}
+
+.youAccaunt,
+.discover,
+.meetup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.youAccaunt h3,
+.discover h3,
+.meetup h3 {
+  color: #f6f7f8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.youAccaunt a,
+.discover a,
+.meetup a {
+  color: #c5c4c4;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.folowUsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.folowUsContent h3 {
+  color: #f6f7f8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cozialMedia {
+  display: flex;
+  gap: 32px;
+}
+
+.cozialMedia img {
+  width: 30px;
+  height: 30px;
+}
+
+.digitalContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.appContent {
+  display: flex;
+  gap: 12px;
+}
+
+.appContent img {
+  max-width: 140px;
+  height: 40px;
+  width: 100%;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 24px;
+  justify-content: start;
+  align-items: center;
+}
+
+.legalLinks a {
+  text-decoration: none;
+  color: #c5c4c4;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.legalLinks a:first-child {
+  color: #ffffff;
 }
