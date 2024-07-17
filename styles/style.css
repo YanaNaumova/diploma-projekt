@@ -795,3 +795,132 @@ footer {
 .legalLinks a:first-child {
   color: #ffffff;
 }
+/*=================END FOOTER===================*/
+/*============START EVENTNEARNYSECTION===========*/
+.eventNearNYSection {
+  display: flex;
+  padding-top: 77px;
+  padding-bottom: 101px;
+  justify-content: space-between;
+}
+
+.eventNearNY {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  width: 50%;
+}
+
+.eventNearNYTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eventNearNYTitleContainer h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.eventNearNYTitleContainer a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #00798a;
+}
+
+.eventNearNYSettingsContainer {
+  display: flex;
+  gap: 18px;
+}
+
+.eventNearNYSettingsContainer select {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 12px;
+  border: none;
+  color: #212121;
+  background-color: #f6f7f8;
+}
+
+.selectContainer {
+  background-color: #f6f7f8;
+  border-radius: 40px;
+  padding: 16px;
+}
+
+.eventNearNYCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.eventNearNYCard {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 16px;
+}
+
+.eventNearNYCard img {
+  max-width: 159px;
+  width: 100%;
+}
+
+.cardNearNYContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.eventTime {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7c6f50;
+  text-transform: uppercase;
+}
+
+.basicEvntNearNYInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.basicEvntNearNYInformation h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+}
+
+.eventDistance {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707070;
+}
+
+.eventMemebers {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707070;
+}
+
+.remainingSpots {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e32359;
+}
+
+.attendeesEventNearNY {
+  display: flex;
+  gap: 15px;
+}
+/*============END EVENTNEARNYSECTION===========*/
