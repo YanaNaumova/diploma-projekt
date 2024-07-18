@@ -811,24 +811,23 @@ footer {
   width: 50%;
 }
 
-.eventNearNYTitleContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
 .eventNearNYTitleContainer h2 {
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
   color: #000000;
+  margin-bottom: 16px;
 }
 
-.eventNearNYTitleContainer a {
+.eventNearNYTitleContainer p {
+  display: inline-block;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: #00798a;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #00798a;
+  margin-bottom: 12px;
 }
 
 .eventNearNYSettingsContainer {
@@ -836,7 +835,7 @@ footer {
   gap: 18px;
 }
 
-.eventNearNYSettingsContainer select {
+.selectContainer select {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -844,12 +843,22 @@ footer {
   border: none;
   color: #212121;
   background-color: #f6f7f8;
+  outline: none;
+  cursor: pointer;
 }
 
 .selectContainer {
   background-color: #f6f7f8;
   border-radius: 40px;
   padding: 16px;
+}
+
+.selectContainer select:hover {
+  background-color: #f6f7f8;
+}
+
+.selectContainer select:focus {
+  background-color: #f6f7f8;
 }
 
 .eventNearNYCardsContainer {
@@ -864,10 +873,12 @@ footer {
   gap: 12px;
   border-top: 1px solid #d9d9d9;
   padding-top: 16px;
+  min-height: 140px;
 }
 
 .eventNearNYCard img {
   max-width: 159px;
+  max-height: 90px;
   width: 100%;
 }
 
@@ -922,5 +933,67 @@ footer {
 .attendeesEventNearNY {
   display: flex;
   gap: 15px;
+}
+
+.eventNearNYMap {
+  display: flex;
+  max-width: 350px;
+  flex-direction: column;
+  width: 50%;
+  justify-content: start;
+  align-items: end;
+  gap: 14px;
+}
+
+.mapImage {
+  max-width: 350px;
+  width: 100%;
+  z-index: 1;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+}
+
+.closeImage {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.showInBrowserImage {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 173px;
+  height: 41px;
+  width: 100%;
+}
+
+.mapTextContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.mapTextContent p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #212121;
+}
+
+.mapTextContent h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
 }
 /*============END EVENTNEARNYSECTION===========*/

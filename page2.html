@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="headerLogoInputs">
-        <img src="assets/images/image.png" alt="logo" />
+        <img src="assets/images/image.png" alt="logo" class="logo" />
         <div class="headerInputs">
           <div class="searchEvents">
             <input
@@ -55,11 +55,14 @@
         <div class="eventNearNY">
           <div class="eventNearNYTitleContainer">
             <h2>Events near New York, NY</h2>
-            <a href="#">Events</a>
+            <p>Events</p>
             <div class="eventNearNYSettingsContainer">
               <div class="selectContainer">
                 <select>
                   <option value="">Any type</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
                 </select>
               </div>
               <div class="selectContainer">
@@ -82,10 +85,6 @@
                   <p class="eventTime">Wed, Mar 13 · 11:30 PM UTC</p>
                   <h3>All Nations - Manhattan Missions Church Bible Study</h3>
                   <p class="eventDistance">Hobbies and Passions (5 km)</p>
-                </div>
-                <div class="attendeesEventNearNY">
-                  <p class="eventMemebers">99 attendees</p>
-                  <p class="remainingSpots">2 spots left</p>
                 </div>
               </div>
             </div>
@@ -120,9 +119,27 @@
           </div>
         </div>
         <div class="eventNearNYMap">
-          <p>Find events near</p>
-          <h3>New York, NY</h3>
-          <img src="assets/images/map-thumbnail.png" alt="map" />
+          <div class="mapTextContent">
+            <p>Find events near</p>
+            <h3>New York, NY</h3>
+          </div>
+          <div class="mapContainer">
+            <img
+              src="assets/images/map-thumbnail.png"
+              alt="map"
+              class="mapImage"
+            />
+            <img
+              src="assets/images/CloseMap.svg"
+              alt="close"
+              class="closeImage"
+            />
+            <img
+              src="assets/images/ShowMapInBrowser.svg"
+              alt="snow in Browser"
+              class="showInBrowserImage"
+            />
+          </div>
         </div>
       </section>
     </main>
