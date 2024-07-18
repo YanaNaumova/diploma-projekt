@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  color: #212121;
 }
 
 body {
@@ -13,6 +14,11 @@ body {
   align-items: center;
 }
 
+.headerFont {
+  font-weight: 600;
+  font-size: calc(20px + (28 - 20) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(24.7px + (36 - 24.7) * ((100vw - 393px) / (1512 - 393)));
+}
 /*===========================START HEADER===========================*/
 header {
   width: 100%;
@@ -21,6 +27,7 @@ header {
   padding: 15px 50px 11px 24px;
   height: 64px;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .headerLogoInputs {
@@ -32,6 +39,8 @@ header {
 
 .headerInputs {
   display: flex;
+  width: 100%;
+  max-width: 600px;
 }
 
 .headerButtons {
@@ -55,11 +64,12 @@ header {
   border-radius: 8px;
   padding: 8px 16px;
   border: none;
-  font-weight: medium;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .singUpHeader {
-  font-weight: medium;
+  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   width: 83px;
@@ -67,7 +77,7 @@ header {
 }
 
 .joinMeetup {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   width: 125px;
@@ -76,13 +86,12 @@ header {
 
 .language,
 .LogIn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
   text-decoration: none;
-  color: #212121;
-}
-
-.headerInputs {
   width: 100%;
-  max-width: 600px;
+  white-space: nowrap;
 }
 
 .headerLogoInputs {
@@ -104,7 +113,6 @@ header {
   padding: 10px;
   border-radius: 8px 0px 0px 8px;
   border: 1px solid #d9d9d9;
-  border-right: none;
 }
 
 .inputCityContainer {
@@ -146,29 +154,31 @@ header {
   width: 100%;
   border: none;
   outline: none;
+}
+.inputEvents::placeholder {
+  color: #707070;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18.75px;
-}
-.inputEvents {
-  color: #707070;
 }
 
-.inputCity {
+.inputCity::placeholder {
   color: #000000;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 /*===========================END HEADER===========================*/
 /*====================START PEOPLEPLATFORMSECTION=================*/
 
 main {
-  padding: 0px 158px 0px 158px;
+  padding: 0px 10.45%;
   width: 100%;
 }
 
 .peoplePlatformSection {
   display: flex;
   padding: 71px 0px 98.5px 0px;
+  gap: 46px;
 }
 
 .peoplePlatformContent {
@@ -179,17 +189,15 @@ main {
 }
 
 .peoplePlatformContent h1 {
-  color: #212121;
   font-weight: 700;
-  line-height: 52px;
-  font-size: 42px;
+  line-height: calc(30.5px + (52 - 30.5) * ((100vw - 393px) / (1512 - 393)));
+  font-size: calc(25px + (42 - 25) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .peoplePlatformContent {
-  color: #212121;
   font-weight: 400;
   line-height: 24px;
-  font-size: 16px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .peoplePlatformImage {
@@ -199,7 +207,6 @@ main {
 .peoplePlatformImage img {
   max-width: 379px;
   width: 100%;
-  padding-left: 55px;
 }
 
 /*====================END PEOPLEPLATFORMSECTION=================*/
@@ -224,22 +231,13 @@ main {
   align-items: center;
 }
 
-.eventsNearTitle h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
-}
-
 .cityEvent {
   display: flex;
-  position: relative;
   gap: 8px;
   justify-content: center;
   align-items: center;
   padding: 12px;
   border-radius: 8px;
-  background-color: transparent;
   background-color: rgba(151, 202, 209, 0.12);
 }
 
@@ -249,9 +247,9 @@ main {
 }
 
 .cityEvent p {
-  font-weight: 600px;
-  font-size: 20px;
-  line-height: 24px;
+  font-weight: 600;
+  font-size: calc(13.71px + (20 - 13.71) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(16.4px + (24 - 16.4) * ((100vw - 393px) / (1512 - 393)));
   color: #00798a;
 }
 
@@ -259,7 +257,7 @@ main {
 .eventOnlineTitleContainer a {
   color: #00798a;
   font-weight: 500;
-  font-size: 16;
+  font-size: 16px;
   line-height: 24px;
   text-decoration: none;
 }
@@ -283,7 +281,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding-bottom: 74px;
+  max-height: 399px;
   width: 100%;
 }
 
@@ -303,15 +301,14 @@ main {
 .eventNearCard h3,
 .eventOnlineNearCard h3 {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #212121;
+  font-size: calc(9.81px + (20 - 9.81) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(14.7px + (24 - 14.7) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .eventTypeandLocation {
   color: #707070;
-  font-size: 14;
-  line-height: 20px;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
   font-weight: 500;
 }
 
@@ -322,8 +319,8 @@ main {
 
 .eventTime p {
   font-weight: 400;
-  line-height: 20px;
-  font-size: 14px;
+  line-height: calc(12.1px + (20 - 12.1) * ((100vw - 393px) / (1512 - 393)));
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
   text-transform: uppercase;
 }
 
@@ -345,10 +342,10 @@ main {
 
 .eventVisit p,
 .eventEntry p {
-  font-size: 16px;
+  font-size: calc(8.44px + (16 - 8.44) * ((100vw - 393px) / (1512 - 393)));
   font-weight: 400;
-  line-height: 24px;
-  color: #212121;
+  line-height: calc(12.1px + (24 - 12.1) * ((100vw - 393px) / (1512 - 393)));
+  white-space: nowrap;
 }
 
 .eventVisit img,
@@ -367,19 +364,16 @@ main {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  align-items: center;
 }
 
-.eventOnlineTitleContainer h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
-}
 /*====================END EVENTONLINESECTION================*/
 /*====================START JOINMEETUPSECTION===============*/
 .joinMeetupSection {
   display: flex;
-  padding: 36px 56px 36px 56px;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 4.69%;
   gap: 70px;
   border-radius: 8px;
   background-color: rgba(151, 202, 209, 0.08);
@@ -390,20 +384,13 @@ main {
   flex-direction: column;
   gap: 16px;
   width: 65%;
-}
-
-.joinMeetupContentContainer h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
+  padding: 36px 0px;
 }
 
 .joinMeetupContentContainer p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 393px) / (1512 - 393)));
   line-height: 24px;
-  color: #212121;
 }
 
 .singUpMeetup {
@@ -437,14 +424,6 @@ main {
   gap: 24px;
 }
 
-.topCategoriesTeitleContainer h2 {
-  display: flex;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
-}
-
 .topCategoriesContentContainer {
   display: flex;
   gap: 16px;
@@ -476,7 +455,6 @@ main {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #212121;
 }
 /*====================END TOPCATEGORIESSECTION==========*/
 /*==============START POPULARCITIESONMEETUPSECTION======*/
@@ -493,17 +471,10 @@ main {
   gap: 16px;
 }
 
-.popularCitiesOnMeetupTitleContainer h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
-}
-
 .popularCitiesOnMeetupTitleContainer p {
   color: #707070;
   font-weight: 400;
-  font-size: 16px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 393px) / (1512 - 393)));
   line-height: 24px;
 }
 
@@ -524,9 +495,8 @@ main {
 
 .popularCitiesOnMeetupImageContainer p {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: #212121;
+  font-size: calc(14.93px + (20 - 14.93) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(20.9px + (28 - 20.9) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .popularCitiesOnMeetupImageContainer img {
@@ -542,18 +512,11 @@ main {
   gap: 24px;
 }
 
-.meetupWorksSection h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
-}
-
 .discoverEventandGroupsContainer,
 .startGroupContainer {
   display: flex;
   gap: 24px;
-  padding: 32px 0 24px 24px;
+  padding: 32px 24px 24px 24px;
   background-color: rgba(151, 202, 209, 0.12);
   border-radius: 8px;
   width: 50%;
@@ -576,23 +539,21 @@ main {
 .discoverEventandGroupsContent h3,
 .startGroupContent h3 {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #212121;
+  font-size: calc(12px + (20 - 12) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(14.9px + (24 - 14.9) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .discoverEventandGroupsContent p,
 .startGroupContent p {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #212121;
+  font-size: calc(9.96px + (16 - 9.96) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(14.9px + (24 - 14.9) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .discoverEventandGroupsContent a,
 .startGroupContent a {
   font-weight: 500;
-  font-size: 16px;
+  font-size: calc(10px + (16 - 10) * ((100vw - 393px) / (1512 - 393)));
   line-height: 24px;
   color: #00798a;
   text-decoration: none;
@@ -618,13 +579,6 @@ main {
   max-width: 880px;
 }
 
-.frendshipTitleContainer h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #212121;
-}
-
 .frendshipTitleContainer p {
   font-weight: 400;
   font-size: 16px;
@@ -642,29 +596,41 @@ main {
   width: 100%;
 }
 
-.frendshipsCard h3 {
-  margin-top: 24px;
+.frendshipsCardTextContent h3 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 393px) / (1512 - 393)));
   line-height: 28px;
-  color: #212121;
 }
 
-.frendshipsCard p {
+.frendshipsCardTextContent p {
   margin-top: 12px;
   margin-bottom: 16px;
   color: #707070;
   font-weight: 400;
-  font-size: 16px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 393px) / (1512 - 393)));
   line-height: 24px;
 }
 
-.frendshipsCard a {
+.frendshipsCardTextContent a {
   color: #00798a;
   font-weight: 400;
-  font-size: 16px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 393px) / (1512 - 393)));
   line-height: 24px;
   text-decoration: none;
+}
+
+.frendshipsCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.frendshipsCardTextContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  width: 100%;
 }
 /*==============END FRIENDSHIPSSECTION============*/
 /*=================START FOOTER===================*/
@@ -672,10 +638,11 @@ footer {
   width: 100%;
   max-width: 1512px;
   display: flex;
-  padding: 24px 158px 40px 158px;
+  padding: 24px 10.45% 40px 10.45%;
   background-color: #212121;
   flex-direction: column;
   gap: 24px;
+  height: 559px;
 }
 
 .createMeetupGroup {
@@ -707,6 +674,7 @@ footer {
 
 .contentFooter {
   display: flex;
+  margin-bottom: 12px;
 }
 
 .youAccaunt,
@@ -764,11 +732,13 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 24px;
 }
 
 .appContent {
   display: flex;
   gap: 12px;
+  align-items: end;
 }
 
 .appContent img {
@@ -812,10 +782,6 @@ footer {
 }
 
 .eventNearNYTitleContainer h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  color: #000000;
   margin-bottom: 16px;
 }
 
@@ -831,40 +797,54 @@ footer {
 }
 
 .eventNearNYSettingsContainer {
+  width: 100%;
   display: flex;
   gap: 18px;
+  justify-content: start;
 }
 
-.selectContainer select {
+select {
+  position: relative;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   padding-right: 12px;
   border: none;
-  color: #212121;
   background-color: #f6f7f8;
-  outline: none;
   cursor: pointer;
+  z-index: 1;
 }
 
 .selectContainer {
   background-color: #f6f7f8;
   border-radius: 40px;
   padding: 16px;
+  overflow: visible;
 }
 
-.selectContainer select:hover {
+/* select:hover {
+  background-color: #f6f7f8;
+} */
+
+/* select option {
+  background-color: #f6f7f8;
+  color: #000;
+} */
+
+select:focus {
+  outline: none;
   background-color: #f6f7f8;
 }
 
-.selectContainer select:focus {
-  background-color: #f6f7f8;
-}
+/* select:focus option:selected {
+  background-color: #212121;
+  color: #fff;
+  border: none;
+} */
 
 .eventNearNYCardsContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   width: 100%;
 }
 
@@ -873,7 +853,7 @@ footer {
   gap: 12px;
   border-top: 1px solid #d9d9d9;
   padding-top: 16px;
-  min-height: 140px;
+  min-height: 160px;
 }
 
 .eventNearNYCard img {
@@ -904,29 +884,28 @@ footer {
 
 .basicEvntNearNYInformation h3 {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #212121;
+  font-size: calc(9.81px + (16 - 9.81) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(9.51px + (24 - 9.51) * ((100vw - 393px) / (1512 - 393)));
 }
 
 .eventDistance {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
   color: #707070;
 }
 
 .eventMemebers {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
   color: #707070;
 }
 
 .remainingSpots {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
   color: #e32359;
 }
 
@@ -943,6 +922,7 @@ footer {
   justify-content: start;
   align-items: end;
   gap: 14px;
+  padding-left: 20px;
 }
 
 .mapImage {
@@ -988,7 +968,6 @@ footer {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: #212121;
 }
 
 .mapTextContent h3 {
@@ -997,3 +976,182 @@ footer {
   line-height: 28px;
 }
 /*============END EVENTNEARNYSECTION===========*/
+
+/*=======MEDIA QUERY START=====*/
+
+@media (max-width: 1024px) {
+  .headerLogoInputs {
+    gap: 20px;
+  }
+  .startGroupContainer,
+  .discoverEventandGroupsContainer {
+    padding: 32px 15px 24px 15px;
+  }
+  .peoplePlatformSection {
+    padding: 40px 0px 50.5px 0px;
+  }
+
+  .eventNearRow1CardsContainer,
+  .eventNearRow2CardsContainer,
+  .eventOnlineNearRow1CardsContainer {
+    gap: 20px;
+  }
+  .eventNearCard,
+  .eventOnlineNearCard {
+    height: auto;
+  }
+
+  .eventsOnlineSection {
+    padding-bottom: 30px;
+  }
+
+  .topCategoriesSection {
+    padding: 32px 0px;
+  }
+
+  .popularCitiesOnMeetupTitleContainer {
+    gap: 10px;
+  }
+
+  .popularCitiesOnMeetupSection {
+    gap: 15px;
+    padding-bottom: 45px;
+  }
+
+  .popularCitiesOnMeetupImageContainers {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .popularCitiesOnMeetupImageContainer {
+    gap: 15px;
+  }
+
+  .meetupWorksSection {
+    padding-bottom: 45px;
+  }
+
+  .friendshipsSection {
+    padding-bottom: 45px;
+  }
+
+  .friendshipsSection {
+    gap: 16px;
+  }
+
+  .frendshipsCards {
+    gap: 20px;
+  }
+
+  .eventNearNYSection {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .eventNearNYMap {
+    padding-top: 170px;
+  }
+
+  .eventNearNYCard img {
+    max-width: 110px;
+  }
+
+  .cardNearNYContent {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 393px) {
+  main {
+    padding: 0px 15px;
+  }
+
+  .peoplePlatformSection {
+    flex-direction: column;
+  }
+
+  .peoplePlatformContent,
+  .peoplePlatformImage {
+    width: 100%;
+  }
+
+  .peoplePlatformImage {
+    max-width: 215px;
+  }
+
+  .seeAllEvents {
+    display: none;
+  }
+
+  .headerInputs {
+    display: none;
+  }
+
+  .eventNearRow1CardsContainer,
+  .eventNearRow2CardsContainer,
+  .eventOnlineNearRow1CardsContainer {
+    flex-direction: column;
+  }
+
+  .eventNearCard,
+  .eventOnlineNearCard {
+    flex-direction: row;
+  }
+
+  .eventNearCard img,
+  .eventOnlineNearCard img {
+    max-width: 97.51px;
+  }
+
+  .textCardContainer {
+    gap: 4px;
+  }
+
+  .joinMeetupSection {
+    flex-direction: column;
+  }
+
+  .joinMeetupContentContainer {
+    width: 100%;
+  }
+
+  .joinMeetupImageContainer {
+    width: 100%;
+  }
+
+  .popularCitiesOnMeetupImageContainer img {
+    max-width: 153px;
+  }
+
+  .popularCitiesOnMeetupImageContainer:last-child {
+    display: none;
+  }
+
+  .groupsContainer {
+    flex-direction: column;
+  }
+
+  .startGroupContainer,
+  .discoverEventandGroupsContainer {
+    width: 100%;
+  }
+
+  .frendshipTitleContainer p {
+    display: none;
+  }
+
+  .frendshipsCards {
+    flex-direction: column;
+  }
+
+  .appContent {
+    display: none;
+  }
+
+  .legalLinks a:not(:first-child) {
+    display: none;
+  }
+}
