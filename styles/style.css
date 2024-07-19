@@ -371,12 +371,22 @@ main {
 /*====================START JOINMEETUPSECTION===============*/
 .joinMeetupSection {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 0% 4.69%;
-  gap: 70px;
   border-radius: 8px;
   background-color: rgba(151, 202, 209, 0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+.joinMeetUpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 20px 0px;
 }
 
 .joinMeetupContentContainer {
@@ -384,7 +394,6 @@ main {
   flex-direction: column;
   gap: 16px;
   width: 65%;
-  padding: 36px 0px;
 }
 
 .joinMeetupContentContainer p {
@@ -1076,10 +1085,13 @@ select:focus {
   .peoplePlatformContent,
   .peoplePlatformImage {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .peoplePlatformImage {
+  .peoplePlatformImage img {
     max-width: 215px;
+    width: 100%;
   }
 
   .seeAllEvents {
@@ -1110,8 +1122,10 @@ select:focus {
     gap: 4px;
   }
 
-  .joinMeetupSection {
-    flex-direction: column;
+  .joinMeetUpContainer {
+    gap: 6px;
+    flex-direction: column-reverse;
+    padding: 0 0 32px 0;
   }
 
   .joinMeetupContentContainer {
@@ -1153,5 +1167,18 @@ select:focus {
 
   .legalLinks a:not(:first-child) {
     display: none;
+  }
+
+  .hidden {
+    display: flex;
+    padding-top: 16px;
+  }
+
+  .headerHidden {
+    display: none;
+  }
+
+  .singUpMeetup {
+    margin: 0 auto;
   }
 }
