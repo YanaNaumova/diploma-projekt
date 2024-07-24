@@ -14,45 +14,39 @@
   </head>
   <body>
     <header>
-      <div class="headerLogoInputs">
-        <img src="assets/images/image.png" alt="logo" class="logo" />
-        <div class="headerInputs">
-          <div class="searchEvents">
-            <input
-              type="text"
-              class="inputEvents"
-              placeholder="Search events"
-            />
-            <img
-              src="assets/images/searchGrey.svg"
-              alt="search"
-              class="searchIconEvnts"
-            />
-          </div>
-          <div class="searchCity">
-            <div class="inputCityContainer">
-              <input
-                type="text"
-                class="inputCity"
-                placeholder="Mountain View, CA"
-              />
-            </div>
-            <div class="searchIconCityContainer">
-              <img
-                src="assets/images/searchWhite.svg"
-                alt="search"
-                class="searchIconCity"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="assets/images/image.png" alt="logo" class="logo" />
       <div class="headerSettings">
         <img src="assets/images/lenguage.svg" alt="lenguage" />
         <div class="headerButtons">
           <a href="#" class="language">English</a>
           <a href="#" class="LogIn">Log in</a>
           <button class="singUpHeader">Sing up</button>
+        </div>
+      </div>
+      <div class="headerInputs">
+        <div class="searchEvents">
+          <input type="text" class="inputEvents" placeholder="Search events" />
+          <img
+            src="assets/images/searchGrey.svg"
+            alt="search"
+            class="searchIconEvnts"
+          />
+        </div>
+        <div class="searchCity">
+          <div class="inputCityContainer">
+            <input
+              type="text"
+              class="inputCity"
+              placeholder="Mountain View, CA"
+            />
+          </div>
+          <div class="searchIconCityContainer">
+            <img
+              src="assets/images/searchWhite.svg"
+              alt="search"
+              class="searchIconCity"
+            />
+          </div>
         </div>
       </div>
     </header>
@@ -90,17 +84,22 @@
                 <h3>Day Trading Idea and Strategy</h3>
                 <p class="eventTypeandLocation">Business (5 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Mon, Mar 18 · 7:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>1 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="attendeesEvent">
+                      <p>1 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -111,17 +110,22 @@
                 <h3>Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
                 <p class="eventTypeandLocation">Business (25 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Tue, Mar 19 · 5:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>41 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="attendeesEvent">
+                      <p>41 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -135,17 +139,26 @@
                 </h3>
                 <p class="eventTypeandLocation">Technology</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Wed, Mar 13 · 6:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>40 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="onlineEvent">
+                      <img src="assets/images/camera.svg" alt="camera" />
+                      <p>Online Event</p>
+                    </div>
+                    <div class="attendeesEvent">
+                      <p>40 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,17 +169,22 @@
                 <h3>INFORMS San Francisco Chapter In-Person Event</h3>
                 <p class="eventTypeandLocation">Health and Wellbeing (50 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Thu, Mar 28 · 5:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>41 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="attendeesEvent">
+                      <p>1 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -179,17 +197,22 @@
                 <h3>AI Wednesdays - Meet and Greet!</h3>
                 <p class="eventTypeandLocation">Technology (5 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Wed, Mar 13 · 6:30 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>29 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="attendeesEvent">
+                      <p>29 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -200,17 +223,26 @@
                 <h3>ROS By-The-Bay March 2024</h3>
                 <p class="eventTypeandLocation">Social Activities</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Thu, Mar 21 · 6:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>51 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="onlineEvent">
+                      <img src="assets/images/camera.svg" alt="camera" />
+                      <p>Online Event</p>
+                    </div>
+                    <div class="attendeesEvent">
+                      <p>51 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -221,17 +253,22 @@
                 <h3>Free Christian Singles' Dinner</h3>
                 <p class="eventTypeandLocation">Hobbies and Passions (10 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Fri, Mar 29 · 6:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>11 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="attendeesEvent">
+                      <p>11 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -244,17 +281,22 @@
                 </h3>
                 <p class="eventTypeandLocation">Hobbies and Passions (50 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Thu, Mar 14 · 5:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>16 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="attendeesEvent">
+                      <p>16 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -278,17 +320,26 @@
                 </h3>
                 <p class="eventTypeandLocation">Business (25 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Thu, Mar 14 · 6:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>3 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="onlineEvent">
+                      <img src="assets/images/camera.svg" alt="camera" />
+                      <p>Online Event</p>
+                    </div>
+                    <div class="attendeesEvent">
+                      <p>3 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -299,17 +350,26 @@
                 <h3>Vision Pro Developers Online Meetup</h3>
                 <p class="eventTypeandLocation">Technology</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Wed, Mar 13 · 7:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>51 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="onlineEvent">
+                      <img src="assets/images/camera.svg" alt="camera" />
+                      <p>Online Event</p>
+                    </div>
+                    <div class="attendeesEvent">
+                      <p>51 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -320,17 +380,26 @@
                 <h3>Significant Musical Moments</h3>
                 <p class="eventTypeandLocation">Hobbies and Passions (10 km)</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Wed, Mar 13 · 6:00 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>16 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="onlineEvent">
+                      <img src="assets/images/camera.svg" alt="camera" />
+                      <p>Online Event</p>
+                    </div>
+                    <div class="attendeesEvent">
+                      <p>16 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -341,17 +410,26 @@
                 <h3>FREE Webinar : Introduction to Power BI</h3>
                 <p class="eventTypeandLocation">Technology</p>
                 <div class="eventTime">
-                  <img src="assets/images/1.svg" alt="time" />
+                  <img src="assets/images/1.svg" alt="time" class="hidden" />
                   <p>Thu, Mar 14 · 5:30 PM PDT</p>
                 </div>
                 <div class="eventEntryAndVisit">
-                  <div class="eventVisit">
+                  <div class="eventVisit hidden">
                     <img src="assets/images/2.svg" alt="going" />
                     <p>33 going</p>
                   </div>
-                  <div class="eventEntry">
+                  <div class="eventEntry hidden">
                     <img src="assets/images/3.svg" alt="price" />
                     <p>Free</p>
+                  </div>
+                  <div class="visible">
+                    <div class="onlineEvent">
+                      <img src="assets/images/camera.svg" alt="camera" />
+                      <p>Online Event</p>
+                    </div>
+                    <div class="attendeesEvent">
+                      <p>33 attendees</p>
+                    </div>
                   </div>
                 </div>
               </div>
