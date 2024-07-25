@@ -787,7 +787,7 @@ footer {
 .eventNearNY {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 56px;
   width: 50%;
 }
 
@@ -813,44 +813,74 @@ footer {
   justify-content: start;
 }
 
-select {
+.selectContainer {
   position: relative;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  padding-right: 12px;
-  border: none;
-  background-color: #f6f7f8;
-  cursor: pointer;
-  z-index: 1;
 }
 
-.selectContainer {
+.dropdownButton {
+  display: flex;
+  gap: 11px;
   background-color: #f6f7f8;
   border-radius: 40px;
   padding: 16px;
-  overflow: visible;
-}
-
-/* select:hover {
-  background-color: #f6f7f8;
-} */
-
-/* select option {
-  background-color: #f6f7f8;
-  color: #000;
-} */
-
-select:focus {
-  outline: none;
-  background-color: #f6f7f8;
-}
-
-/* select:focus option:selected {
-  background-color: #212121;
-  color: #fff;
   border: none;
-} */
+  cursor: pointer;
+  width: 100%;
+  min-width: 120px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdownButton p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #212121;
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  max-width: 82px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdownButton img {
+  width: 14px;
+  height: 14px;
+}
+
+.dropdownContent {
+  background-color: #f6f7f8;
+  display: none;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 5px;
+  padding: 10px;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 1;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.dropdownContent a {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.dropdownContent a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.show {
+  display: flex;
+}
 
 .eventNearNYCardsContainer {
   display: flex;
@@ -878,7 +908,7 @@ select:focus {
   gap: 28px;
 }
 
-.eventTime {
+.eventTimeNY {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -926,7 +956,7 @@ select:focus {
 
 .eventNearNYMap {
   display: flex;
-  max-width: 350px;
+  max-width: 370px;
   flex-direction: column;
   width: 50%;
   justify-content: start;
@@ -1130,6 +1160,14 @@ select:focus {
     max-width: 215px;
     width: 100%;
   }
+
+  .eventNearNYMap {
+    display: none;
+  }
+
+  .eventNearNY {
+    width: 100%;
+  }
 }
 
 @media (max-width: 530px) {
@@ -1257,6 +1295,15 @@ select:focus {
   .frendshipsCards {
     flex-wrap: wrap;
   }
+
+  .eventNearNYSettingsContainer {
+    gap: 10px;
+  }
+
+  .dropdownButton {
+    gap: 5px;
+    padding: 8px;
+  }
 }
 
 @media (max-width: 393px) {
@@ -1373,5 +1420,9 @@ select:focus {
   .createMeetupGroup {
     gap: 0px;
     justify-content: space-between;
+  }
+
+  .eventNearNYSettingsContainer {
+    gap: 5px;
   }
 }
