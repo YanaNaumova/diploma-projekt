@@ -1,0 +1,190 @@
+/*===========================START HEADER===========================*/
+header {
+  width: 100%;
+  max-width: 1512px;
+  display: flex;
+  padding: 15px 50px 11px 24px;
+  gap: 20px;
+}
+
+.headerInputs {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 40px;
+  order: 1;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.headerSettings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  order: 2;
+}
+
+.logo {
+  max-width: 118px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.singUpHeader,
+.joinMeetup {
+  background-color: #00798a;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: none;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.singUpHeader {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  width: 83px;
+  height: 36px;
+}
+
+.language,
+.LogIn {
+  font-weight: 500;
+  font-size: calc(12px + (14 - 12) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(17.1px + (20 - 17.1) * ((100vw - 393px) / (1512 - 393)));
+  text-decoration: none;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.headerLogoInputs {
+  width: 100%;
+  max-width: 750px;
+}
+
+.searchEvents,
+.searchCity {
+  width: 100%;
+  height: 42px;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.searchEvents {
+  padding: 10px;
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid #d9d9d9;
+}
+
+.inputCityContainer {
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+}
+
+.searchIconCity {
+  width: 20px;
+  height: 20px;
+}
+
+.searchIconEvnts {
+  width: 22px;
+  height: 22px;
+}
+
+.searchIconEvnts {
+  margin-right: 5px;
+  order: -1;
+}
+
+.searchIconCityContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 42px;
+  height: 100%;
+  border-radius: 0px 8px 8px 0px;
+  padding: 11px;
+  background-color: #f65858;
+  cursor: pointer;
+}
+
+.inputEvents,
+.inputCity {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.inputEvents::placeholder {
+  color: #707070;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.inputCity::placeholder {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+}
+/*===========================END HEADER===========================*/
+/*=======MEDIA QUERY START=====*/
+@media (max-width: 1024px) {
+  .headerLogoInputs {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .headerSettings {
+    order: 1;
+    flex: 1 1 auto;
+    justify-content: end;
+  }
+
+  .headerInputs {
+    order: 2;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 530px) {
+  header {
+    padding: 6px 6px 0px 15px;
+    row-gap: 15px;
+  }
+
+  .headerButtons {
+    gap: 12px;
+  }
+
+  .inputCityContainer {
+    display: none;
+  }
+
+  .headerSettings {
+    margin-left: 0;
+  }
+
+  .searchCity {
+    width: auto;
+  }
+}

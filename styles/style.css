@@ -1,11 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  color: #212121;
-}
+@import "header.css";
+@import "footer.css";
+@import "reset.css";
+@import "page2.css";
 
 body {
   display: flex;
@@ -19,146 +15,7 @@ body {
   font-size: calc(20px + (28 - 20) * ((100vw - 393px) / (1512 - 393)));
   line-height: calc(24.7px + (36 - 24.7) * ((100vw - 393px) / (1512 - 393)));
 }
-/*===========================START HEADER===========================*/
-header {
-  width: 100%;
-  max-width: 1512px;
-  display: flex;
-  padding: 15px 50px 11px 24px;
-  gap: 20px;
-}
 
-.headerInputs {
-  display: flex;
-  width: 100%;
-  max-width: 600px;
-  margin-left: 40px;
-  order: 1;
-}
-
-.headerButtons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-}
-
-.headerSettings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  margin-left: auto;
-  order: 2;
-}
-
-.logo {
-  max-width: 118px;
-  width: 100%;
-}
-
-.singUpHeader,
-.joinMeetup {
-  background-color: #00798a;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 8px 16px;
-  border: none;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.singUpHeader {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  width: 83px;
-  height: 36px;
-}
-
-.language,
-.LogIn {
-  font-weight: 500;
-  font-size: calc(12px + (14 - 12) * ((100vw - 393px) / (1512 - 393)));
-  line-height: calc(17.1px + (20 - 17.1) * ((100vw - 393px) / (1512 - 393)));
-  text-decoration: none;
-  width: 100%;
-  white-space: nowrap;
-}
-
-.headerLogoInputs {
-  width: 100%;
-  max-width: 750px;
-}
-
-.searchEvents,
-.searchCity {
-  width: 100%;
-  height: 42px;
-  max-width: 300px;
-  display: flex;
-  align-items: center;
-}
-
-.searchEvents {
-  padding: 10px;
-  border-radius: 8px 0px 0px 8px;
-  border: 1px solid #d9d9d9;
-}
-
-.inputCityContainer {
-  height: 100%;
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #d9d9d9;
-}
-
-.searchIconCity {
-  width: 20px;
-  height: 20px;
-}
-
-.searchIconEvnts {
-  width: 22px;
-  height: 22px;
-}
-
-.searchIconEvnts {
-  margin-right: 5px;
-  order: -1;
-}
-
-.searchIconCityContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  width: 42px;
-  height: 100%;
-  border-radius: 0px 8px 8px 0px;
-  padding: 11px;
-  background-color: #f65858;
-}
-
-.inputEvents,
-.inputCity {
-  width: 100%;
-  border: none;
-  outline: none;
-}
-.inputEvents::placeholder {
-  color: #707070;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.inputCity::placeholder {
-  color: #000000;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-/*===========================END HEADER===========================*/
 /*====================START PEOPLEPLATFORMSECTION=================*/
 
 main {
@@ -398,6 +255,7 @@ main {
   height: 40px;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .joinMeetupImageContainer img {
@@ -643,386 +501,8 @@ main {
   width: 100%;
 }
 /*==============END FRIENDSHIPSSECTION============*/
-/*=================START FOOTER===================*/
-footer {
-  width: 100%;
-  max-width: 1512px;
-  display: flex;
-  padding: 24px 10.45% 40px 10.45%;
-  background-color: #212121;
-  flex-direction: column;
-  gap: 24px;
-  height: 559px;
-}
-
-.createMeetupGroup {
-  display: flex;
-  gap: 40px;
-  justify-content: start;
-  align-items: center;
-  border-bottom: 1px solid #707070;
-  padding-bottom: 24px;
-}
-
-.createMeetupGroup p {
-  color: #f6f7f8;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.getStartet {
-  color: #ffffff;
-  border-radius: 6px;
-  border: 2px solid white;
-  padding: 10px 14px 10px 14px;
-  background-color: #212121;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.contentFooter {
-  display: flex;
-  margin-bottom: 12px;
-}
-
-.youAccaunt,
-.discover,
-.meetup {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  flex: 1;
-}
-
-.youAccaunt h3,
-.discover h3,
-.meetup h3 {
-  color: #f6f7f8;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.youAccaunt a,
-.discover a,
-.meetup a {
-  color: #c5c4c4;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.folowUsContent {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.folowUsContent h3 {
-  color: #f6f7f8;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.cozialMedia {
-  display: flex;
-  gap: 32px;
-}
-
-.cozialMedia img {
-  width: 30px;
-  height: 30px;
-}
-
-.digitalContent {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 24px;
-}
-
-.appContent {
-  display: flex;
-  gap: 12px;
-  align-items: end;
-}
-
-.appContent img {
-  max-width: 140px;
-  height: 40px;
-  width: 100%;
-}
-
-.legalLinks {
-  display: flex;
-  gap: 24px;
-  justify-content: start;
-  align-items: center;
-}
-
-.legalLinks a {
-  text-decoration: none;
-  color: #c5c4c4;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.legalLinks a:first-child {
-  color: #ffffff;
-}
-/*=================END FOOTER===================*/
-/*============START EVENTNEARNYSECTION===========*/
-.eventNearNYSection {
-  display: flex;
-  padding-top: 77px;
-  padding-bottom: 101px;
-  justify-content: space-between;
-}
-
-.eventNearNY {
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
-  width: 50%;
-}
-
-.eventNearNYTitleContainer h2 {
-  margin-bottom: 16px;
-}
-
-.eventNearNYTitleContainer p {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #00798a;
-  padding-bottom: 5px;
-  border-bottom: 4px solid #00798a;
-  margin-bottom: 12px;
-}
-
-.eventNearNYSettingsContainer {
-  width: 100%;
-  display: flex;
-  gap: 18px;
-  justify-content: start;
-}
-
-.selectContainer {
-  position: relative;
-}
-
-.dropdownButton {
-  display: flex;
-  gap: 11px;
-  background-color: #f6f7f8;
-  border-radius: 40px;
-  padding: 16px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  min-width: 120px;
-  height: 46px;
-  justify-content: center;
-  align-items: center;
-}
-
-.dropdownButton p {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  color: #212121;
-  border: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  max-width: 82px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.dropdownButton img {
-  width: 14px;
-  height: 14px;
-}
-
-.dropdownContent {
-  background-color: #f6f7f8;
-  display: none;
-  flex-direction: column;
-  border-radius: 10px;
-  gap: 5px;
-  padding: 10px;
-  opacity: 0.8;
-  position: absolute;
-  z-index: 1;
-  margin-top: 5px;
-  width: 100%;
-}
-
-.dropdownContent a {
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-}
-
-.dropdownContent a:hover {
-  background-color: #000000;
-  color: white;
-}
-
-.show {
-  display: flex;
-}
-
-.eventNearNYCardsContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.eventNearNYCard {
-  display: flex;
-  gap: 12px;
-  border-top: 1px solid #d9d9d9;
-  padding-top: 16px;
-  min-height: 160px;
-}
-
-.eventNearNYCard img {
-  max-width: 159px;
-  max-height: 90px;
-  width: 100%;
-}
-
-.cardNearNYContent {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.eventTimeNY {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #7c6f50;
-  text-transform: uppercase;
-}
-
-.basicEvntNearNYInformation {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.basicEvntNearNYInformation h3 {
-  font-weight: 400;
-  font-size: calc(9.81px + (16 - 9.81) * ((100vw - 393px) / (1512 - 393)));
-  line-height: calc(9.51px + (24 - 9.51) * ((100vw - 393px) / (1512 - 393)));
-}
-
-.eventDistance {
-  font-weight: 400;
-  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
-  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
-  color: #707070;
-}
-
-.eventMemebers {
-  font-weight: 400;
-  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
-  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
-  color: #707070;
-}
-
-.remainingSpots {
-  font-weight: 400;
-  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
-  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
-  color: #e32359;
-}
-
-.attendeesEventNearNY {
-  display: flex;
-  gap: 15px;
-}
-
-.eventNearNYMap {
-  display: flex;
-  max-width: 370px;
-  flex-direction: column;
-  width: 50%;
-  justify-content: start;
-  align-items: end;
-  gap: 14px;
-  padding-left: 20px;
-}
-
-.mapImage {
-  max-width: 350px;
-  width: 100%;
-  z-index: 1;
-}
-
-.mapContainer {
-  position: relative;
-  width: 100%;
-}
-
-.closeImage {
-  position: absolute;
-  top: 11px;
-  right: 15px;
-  width: 15px;
-  height: 15px;
-  z-index: 2;
-  background-color: #ffffff;
-}
-
-.showInBrowserImage {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 173px;
-  height: 41px;
-  width: 100%;
-}
-
-.mapTextContent {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: start;
-}
-
-.mapTextContent p {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.mapTextContent h3 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-}
-/*============END EVENTNEARNYSECTION===========*/
-
 /*=======MEDIA QUERY START=====*/
-
 @media (max-width: 1024px) {
-  .headerLogoInputs {
-    gap: 20px;
-  }
   .startGroupContainer,
   .discoverEventandGroupsContainer {
     padding: 32px 15px 24px 15px;
@@ -1043,6 +523,14 @@ footer {
 
   .eventsOnlineSection {
     padding-bottom: 30px;
+  }
+
+  .joinMeetupSection {
+    gap: 8px 30px;
+  }
+
+  .joinMeetupContentContainer {
+    gap: 8px;
   }
 
   .topCategoriesSection {
@@ -1078,51 +566,9 @@ footer {
   .friendshipsSection {
     gap: 16px;
   }
-
-  .eventNearNYSection {
-    padding-top: 40px;
-    padding-bottom: 45px;
-  }
-
-  .eventNearNYMap {
-    padding-top: 170px;
-  }
-
-  .eventNearNYCard img {
-    max-width: 110px;
-  }
-
-  .cardNearNYContent {
-    gap: 16px;
-  }
-
-  .joinMeetupSection {
-    gap: 8px 30px;
-  }
-
-  .joinMeetupContentContainer {
-    gap: 8px;
-  }
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .headerSettings {
-    order: 1;
-    flex: 1 1 auto;
-    justify-content: end;
-  }
-
-  .headerInputs {
-    order: 2;
-    margin-left: 0;
-    justify-content: center;
-  }
-
   .eventNearRow1CardsContainer,
   .eventNearRow2CardsContainer,
   .eventOnlineNearRow1CardsContainer {
@@ -1132,14 +578,6 @@ footer {
   .eventNearCard,
   .eventOnlineNearCard {
     max-width: 136px;
-  }
-
-  .appContent {
-    display: none;
-  }
-
-  .legalLinks a:not(:first-child) {
-    display: none;
   }
 
   .peoplePlatformSection {
@@ -1160,40 +598,11 @@ footer {
     max-width: 215px;
     width: 100%;
   }
-
-  .eventNearNYMap {
-    display: none;
-  }
-
-  .eventNearNY {
-    width: 100%;
-  }
 }
 
 @media (max-width: 530px) {
   main {
     padding: 0px 15px;
-  }
-
-  header {
-    padding: 6px 6px 0px 15px;
-    row-gap: 15px;
-  }
-
-  .headerButtons {
-    gap: 12px;
-  }
-
-  .inputCityContainer {
-    display: none;
-  }
-
-  .headerSettings {
-    margin-left: 0;
-  }
-
-  .searchCity {
-    width: auto;
   }
 
   .seeAllEvents {
@@ -1294,15 +703,6 @@ footer {
 
   .frendshipsCards {
     flex-wrap: wrap;
-  }
-
-  .eventNearNYSettingsContainer {
-    gap: 10px;
-  }
-
-  .dropdownButton {
-    gap: 5px;
-    padding: 8px;
   }
 }
 
@@ -1411,18 +811,5 @@ footer {
     font-weight: 400;
     font-size: 8.44px;
     line-height: 12.1px;
-  }
-
-  footer {
-    padding: 24px 15px 40px 15px;
-  }
-
-  .createMeetupGroup {
-    gap: 0px;
-    justify-content: space-between;
-  }
-
-  .eventNearNYSettingsContainer {
-    gap: 5px;
   }
 }

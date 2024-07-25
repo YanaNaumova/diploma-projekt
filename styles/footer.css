@@ -1,0 +1,164 @@
+/*=================START FOOTER===================*/
+footer {
+  width: 100%;
+  max-width: 1512px;
+  display: flex;
+  padding: 24px 10.45% 40px 10.45%;
+  background-color: #212121;
+  flex-direction: column;
+  gap: 24px;
+  height: 559px;
+}
+
+.createMeetupGroup {
+  display: flex;
+  gap: 40px;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 24px;
+}
+
+.createMeetupGroup p {
+  color: #f6f7f8;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.getStartet {
+  color: #ffffff;
+  border-radius: 6px;
+  border: 2px solid white;
+  padding: 10px 14px 10px 14px;
+  background-color: #212121;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  width: 119px;
+  cursor: pointer;
+}
+
+.contentFooter {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.youAccaunt,
+.discover,
+.meetup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.youAccaunt h3,
+.discover h3,
+.meetup h3 {
+  color: #f6f7f8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.youAccaunt a,
+.discover a,
+.meetup a {
+  color: #c5c4c4;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.folowUsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.folowUsContent h3 {
+  color: #f6f7f8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cozialMedia {
+  display: flex;
+  gap: 32px;
+}
+
+.cozialMedia img {
+  width: 30px;
+  height: 30px;
+}
+
+.digitalContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.appContent {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+
+.appContent img {
+  max-width: 140px;
+  height: 40px;
+  width: 100%;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 24px;
+  justify-content: start;
+  align-items: center;
+}
+
+.legalLinks a {
+  text-decoration: none;
+  color: #c5c4c4;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.legalLinks a:first-child {
+  color: #ffffff;
+}
+/*=================END FOOTER===================*/
+
+@media (max-width: 768px) {
+  .appContent {
+    display: none;
+  }
+
+  .legalLinks a:not(:first-child) {
+    display: none;
+  }
+}
+
+@media (max-width: 393px) {
+  footer {
+    padding: 24px 15px 40px 15px;
+  }
+
+  .createMeetupGroup {
+    gap: 0px;
+    justify-content: space-between;
+  }
+
+  .discover {
+    padding-left: 5px;
+  }
+
+  .createMeetupGroup p {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,286 @@
+/*============START EVENTNEARNYSECTION===========*/
+.eventNearNYSection {
+  display: flex;
+  padding-top: 77px;
+  padding-bottom: 101px;
+  justify-content: space-between;
+}
+
+.eventNearNY {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: 50%;
+}
+
+.eventNearNYTitleContainer h2 {
+  margin-bottom: 16px;
+}
+
+.eventNearNYTitleContainer p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #00798a;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #00798a;
+  margin-bottom: 12px;
+}
+
+.eventNearNYSettingsContainer {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  justify-content: start;
+}
+
+.selectContainer {
+  position: relative;
+}
+
+.dropdownButton {
+  display: flex;
+  gap: 11px;
+  background-color: #f6f7f8;
+  border-radius: 40px;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  min-width: 120px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdownButton p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #212121;
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  max-width: 82px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdownButton img {
+  width: 14px;
+  height: 14px;
+}
+
+.dropdownContent {
+  background-color: #f6f7f8;
+  display: none;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 5px;
+  padding: 10px;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 1;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.dropdownContent a {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.dropdownContent a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.show {
+  display: flex;
+}
+
+.eventNearNYCardsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.eventNearNYCard {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 16px;
+  min-height: 160px;
+}
+
+.eventNearNYCard img {
+  max-width: 159px;
+  max-height: 90px;
+  width: 100%;
+}
+
+.cardNearNYContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.eventTimeNY {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7c6f50;
+  text-transform: uppercase;
+}
+
+.basicEvntNearNYInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.basicEvntNearNYInformation h3 {
+  font-weight: 400;
+  font-size: calc(9.81px + (16 - 9.81) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(9.51px + (24 - 9.51) * ((100vw - 393px) / (1512 - 393)));
+}
+
+.eventDistance {
+  font-weight: 400;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
+  color: #707070;
+}
+
+.eventMemebers {
+  font-weight: 400;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
+  color: #707070;
+}
+
+.remainingSpots {
+  font-weight: 400;
+  font-size: calc(8.58px + (14 - 8.58) * ((100vw - 393px) / (1512 - 393)));
+  line-height: calc(12.3px + (20 - 12.3) * ((100vw - 393px) / (1512 - 393)));
+  color: #e32359;
+}
+
+.attendeesEventNearNY {
+  display: flex;
+  gap: 15px;
+}
+
+.eventNearNYMap {
+  display: flex;
+  max-width: 370px;
+  flex-direction: column;
+  width: 50%;
+  justify-content: start;
+  align-items: end;
+  gap: 14px;
+  padding-left: 20px;
+}
+
+.mapImage {
+  max-width: 350px;
+  width: 100%;
+  z-index: 1;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+}
+
+.closeImage {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.showInBrowserImage {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 173px;
+  height: 41px;
+  width: 100%;
+}
+
+.mapTextContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.mapTextContent p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.mapTextContent h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+/*============END EVENTNEARNYSECTION===========*/
+/*=======MEDIA QUERY START=====*/
+@media (max-width: 1024px) {
+  .eventNearNYSection {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .eventNearNYMap {
+    padding-top: 170px;
+  }
+
+  .eventNearNYCard img {
+    max-width: 110px;
+  }
+
+  .cardNearNYContent {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventNearNYMap {
+    display: none;
+  }
+
+  .eventNearNY {
+    width: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+  .eventNearNYSettingsContainer {
+    gap: 10px;
+  }
+
+  .dropdownButton {
+    gap: 5px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 393px) {
+  .eventNearNYSettingsContainer {
+    gap: 5px;
+  }
+}
