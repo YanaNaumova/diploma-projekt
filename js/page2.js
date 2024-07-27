@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  //Navigate to the HomePage
   const logo = document.querySelector(".logo");
   logo.addEventListener("click", () => {
     location.pathname = "/index.html";
   });
 
+  //Select
   const dropdownButtons = document.querySelectorAll(".dropdownButton");
 
   dropdownButtons.forEach((btn) => {
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //Mock Data
   const eventsStore = [
     {
       title: "INFJ Personality Type - Coffee Shop Meet & Greet",
@@ -96,118 +99,151 @@ document.addEventListener("DOMContentLoaded", () => {
     ".eventNearNYCardsContainer"
   );
 
+  //FormatData
+  function formatData(data) {
+    return new Intl.DateTimeFormat("en-GB", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+      timeZone: "UTC",
+      timeZoneName: "short",
+    }).format(data);
+  }
+
+  //createOnlineLabel for image
+  function createOnlineLabel(event, element) {
+    if (event.type === "online") {
+      const online = document.createElement("div");
+      online.classList.add("online");
+      element.append(online);
+
+      const imgOnline = document.createElement("img");
+      imgOnline.src = "assets/icons/camera.svg";
+      imgOnline.alt = "camera";
+      imgOnline.classList.add("camera");
+      online.append(imgOnline);
+
+      const p = document.createElement("p");
+      p.textContent = "Online Event";
+      online.append(p);
+    }
+  }
+
+  //render km
+  function renderDistanceOfflineEvent(event, element) {
+    if (event.type === "offline") {
+      const eventDistance = document.createElement("p");
+      eventDistance.classList.add("eventDistance");
+      eventDistance.textContent = `(${event.distance} km)`;
+      element.append(eventDistance);
+    }
+  }
+
+  //render online
+  function renderOnline(event, element) {
+    if (event.type === "online") {
+      const onlineEventNY = document.createElement("div");
+      onlineEventNY.classList.add("onlineEventNY");
+      element.append(onlineEventNY);
+
+      const imgOnlineNY = document.createElement("img");
+      imgOnlineNY.src = "assets/icons/camera.svg";
+      imgOnlineNY.alt = "camera";
+      imgOnlineNY.classList.add("camera");
+      onlineEventNY.append(imgOnlineNY);
+
+      const pNY = document.createElement("p");
+      pNY.textContent = "Online Event";
+      onlineEventNY.append(pNY);
+    }
+  }
+
+  //render
+  function attendesAndSpots(event, element) {
+    if ("attendees" in event) {
+      const attendeesEventNearNY = document.createElement("div");
+      attendeesEventNearNY.classList.add("attendeesEventNearNY");
+      element.append(attendeesEventNearNY);
+
+      const eventMemebers = document.createElement("p");
+      eventMemebers.classList.add("eventMemebers");
+      eventMemebers.textContent = `${event.attendees} attendees`;
+      attendeesEventNearNY.append(eventMemebers);
+
+      if ("spots" in event) {
+        const remainingSpots = document.createElement("p");
+        remainingSpots.classList.add("remainingSpots");
+        remainingSpots.textContent = `${event.spots} spots left`;
+        attendeesEventNearNY.append(remainingSpots);
+      }
+    }
+  }
+
+  //create cardText
+  function createCardText(event, element) {
+    const cardNearNYContent = document.createElement("div");
+    cardNearNYContent.classList.add("cardNearNYContent");
+    element.append(cardNearNYContent);
+
+    const basicEvntNearNYInformation = document.createElement("div");
+    basicEvntNearNYInformation.classList.add("basicEvntNearNYInformation");
+    cardNearNYContent.append(basicEvntNearNYInformation);
+
+    const eventTimeNY = document.createElement("p");
+    eventTimeNY.classList.add("eventTimeNY");
+    eventTimeNY.textContent = formatData(event.date);
+    basicEvntNearNYInformation.append(eventTimeNY);
+
+    const eventNYHeader = document.createElement("h3");
+    eventNYHeader.classList.add("eventNYHeader");
+    basicEvntNearNYInformation.append(eventNYHeader);
+
+    if (window.innerWidth <= 768) {
+      eventNYHeader.textContent = event.description;
+    } else {
+      eventNYHeader.textContent = event.title;
+    }
+
+    const categoryAndDistanceContainer = document.createElement("div");
+    categoryAndDistanceContainer.classList.add("categoryAndDistanceContainer");
+    basicEvntNearNYInformation.append(categoryAndDistanceContainer);
+
+    const eventCategorie = document.createElement("p");
+    eventCategorie.classList.add("eventCategorie");
+    eventCategorie.textContent = event.category;
+    categoryAndDistanceContainer.append(eventCategorie);
+
+    renderDistanceOfflineEvent(event, categoryAndDistanceContainer);
+
+    renderOnline(event, basicEvntNearNYInformation);
+
+    attendesAndSpots(event, cardNearNYContent);
+  }
+
+  //create Image
+  function createImage(event, element) {
+    const img = document.createElement("img");
+    img.src = event.image;
+    img.alt = "event";
+    img.classList.add("event");
+    element.append(img);
+  }
+
+  //EventCards
   function updateEventCards() {
     eventNearNYCardsContainer.innerHTML = "";
     eventsStore.forEach((event) => {
       const eventNearNYCard = document.createElement("div");
       eventNearNYCard.classList.add("eventNearNYCard");
       eventNearNYCardsContainer.append(eventNearNYCard);
+      createImage(event, eventNearNYCard);
 
-      const img = document.createElement("img");
-      img.src = event.image;
-      img.alt = "event";
-      img.classList.add("event");
-      eventNearNYCard.append(img);
+      createOnlineLabel(event, eventNearNYCard);
 
-      if (event.type === "online") {
-        const online = document.createElement("div");
-        online.classList.add("online");
-        eventNearNYCard.append(online);
-
-        const imgOnline = document.createElement("img");
-        imgOnline.src = "assets/icons/camera.svg";
-        imgOnline.alt = "camera";
-        imgOnline.classList.add("camera");
-        online.append(imgOnline);
-
-        const p = document.createElement("p");
-        p.textContent = "Online Event";
-        online.append(p);
-      }
-
-      const cardNearNYContent = document.createElement("div");
-      cardNearNYContent.classList.add("cardNearNYContent");
-      eventNearNYCard.append(cardNearNYContent);
-
-      const basicEvntNearNYInformation = document.createElement("div");
-      basicEvntNearNYInformation.classList.add("basicEvntNearNYInformation");
-      cardNearNYContent.append(basicEvntNearNYInformation);
-
-      const eventTimeNY = document.createElement("p");
-      eventTimeNY.classList.add("eventTimeNY");
-      eventTimeNY.textContent = new Intl.DateTimeFormat("en-GB", {
-        weekday: "short",
-        month: "short",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        hour12: true,
-        timeZone: "UTC",
-        timeZoneName: "short",
-      }).format(event.date);
-      basicEvntNearNYInformation.append(eventTimeNY);
-
-      const eventNYHeader = document.createElement("h3");
-      eventNYHeader.classList.add("eventNYHeader");
-      basicEvntNearNYInformation.append(eventNYHeader);
-
-      if (window.innerWidth <= 768) {
-        eventNYHeader.textContent = event.description;
-      } else {
-        eventNYHeader.textContent = event.title;
-      }
-
-      const categoryAndDistanceContainer = document.createElement("div");
-      categoryAndDistanceContainer.classList.add(
-        "categoryAndDistanceContainer"
-      );
-      basicEvntNearNYInformation.append(categoryAndDistanceContainer);
-
-      const eventCategorie = document.createElement("p");
-      eventCategorie.classList.add("eventCategorie");
-      eventCategorie.textContent = event.category;
-      categoryAndDistanceContainer.append(eventCategorie);
-
-      if (event.type === "offline") {
-        const eventDistance = document.createElement("p");
-        eventDistance.classList.add("eventDistance");
-        eventDistance.textContent = `(${event.distance} km)`;
-        categoryAndDistanceContainer.append(eventDistance);
-      }
-
-      if (event.type === "online") {
-        const onlineEventNY = document.createElement("div");
-        onlineEventNY.classList.add("onlineEventNY");
-        basicEvntNearNYInformation.append(onlineEventNY);
-
-        const imgOnlineNY = document.createElement("img");
-        imgOnlineNY.src = "assets/icons/camera.svg";
-        imgOnlineNY.alt = "camera";
-        imgOnlineNY.classList.add("camera");
-        onlineEventNY.append(imgOnlineNY);
-
-        const pNY = document.createElement("p");
-        pNY.textContent = "Online Event";
-        onlineEventNY.append(pNY);
-      }
-
-      if ("attendees" in event) {
-        const attendeesEventNearNY = document.createElement("div");
-        attendeesEventNearNY.classList.add("attendeesEventNearNY");
-        cardNearNYContent.append(attendeesEventNearNY);
-
-        const eventMemebers = document.createElement("p");
-        eventMemebers.classList.add("eventMemebers");
-        eventMemebers.textContent = `${event.attendees} attendees`;
-        attendeesEventNearNY.append(eventMemebers);
-
-        if ("spots" in event) {
-          const remainingSpots = document.createElement("p");
-          remainingSpots.classList.add("remainingSpots");
-          remainingSpots.textContent = `${event.spots} spots left`;
-          attendeesEventNearNY.append(remainingSpots);
-        }
-      }
+      createCardText(event, eventNearNYCard);
     });
   }
 

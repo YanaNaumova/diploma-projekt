@@ -156,7 +156,7 @@
 .onlineEventNY p {
   color: #707070;
   font-weight: 500;
-  font-size: 7.3px;
+  font-size: calc(7.3px + (12 - 7.3) * ((100vw - 393px) / (1512 - 393)));
   line-height: 9.73px;
 }
 
