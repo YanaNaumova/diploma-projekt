@@ -704,6 +704,48 @@ main {
   .frendshipsCards {
     flex-wrap: wrap;
   }
+
+  .visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .onlineEvent {
+    display: flex;
+    gap: 2.43px;
+  }
+
+  .onlineEvent img {
+    height: 9.73px;
+    width: 9.73px;
+  }
+
+  .onlineEvent p {
+    color: #707070;
+    font-weight: 400;
+    font-size: 7.3px;
+    line-height: 9.7px;
+  }
+
+  .attendeesEvent {
+    margin-top: 17.21px;
+  }
+
+  .attendeesEvent p {
+    color: #707070;
+    font-weight: 400;
+    font-size: 8.44px;
+    line-height: 12.1px;
+  }
+
+  .textCardContainer {
+    gap: 1px;
+  }
 }
 
 @media (max-width: 393px) {
@@ -722,10 +764,6 @@ main {
 
   .eventsNearSection {
     padding: 0px 0px 40px 0px;
-  }
-
-  .textCardContainer {
-    gap: 1px;
   }
 
   .popularCitiesOnMeetupImageContainer:last-child {
@@ -768,48 +806,11 @@ main {
     gap: 23px;
   }
 
-  .hidden {
-    display: none;
-  }
   .eventTime {
     order: -1;
   }
 
   .eventTime p {
     color: #7c6f50;
-  }
-
-  .visible {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .onlineEvent {
-    display: flex;
-    gap: 2.43px;
-  }
-
-  .onlineEvent img {
-    height: 9.73px;
-    width: 9.73px;
-  }
-
-  .onlineEvent p {
-    color: #707070;
-    font-weight: 400;
-    font-size: 7.3px;
-    line-height: 9.7px;
-  }
-
-  .attendeesEvent {
-    margin-top: 17.21px;
-  }
-
-  .attendeesEvent p {
-    color: #707070;
-    font-weight: 400;
-    font-size: 8.44px;
-    line-height: 12.1px;
   }
 }
