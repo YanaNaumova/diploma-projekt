@@ -39,7 +39,10 @@
   position: relative;
 }
 
-.dropdownButton {
+/* .dropdownButton */
+.typeDropdownBtn,
+.distanceDropdownBtn,
+.categoryDropdownBtn {
   display: flex;
   gap: 11px;
   background-color: #f6f7f8;
@@ -54,7 +57,10 @@
   align-items: center;
 }
 
-.dropdownButton p {
+/* .dropdownButton p */
+.typeDropdownBtn p,
+.distanceDropdownBtn p,
+.categoryDropdownBtn p {
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
@@ -68,12 +74,18 @@
   text-overflow: ellipsis;
 }
 
-.dropdownButton img {
+/* .dropdownButton img  */
+.typeDropdownBtn img,
+.distanceDropdownBtn img,
+.categoryDropdownBtn img {
   width: 14px;
   height: 14px;
 }
 
-.dropdownContent {
+/* .dropdownContent  */
+.typeDropdownContent,
+.distanceDropdownContent,
+.categoryDropdownContent {
   background-color: #f6f7f8;
   display: none;
   flex-direction: column;
@@ -87,7 +99,10 @@
   width: 100%;
 }
 
-.dropdownContent a {
+.typeDropdownContent a,
+.distanceDropdownContent a,
+.categoryDropdownContent a
+/* .dropdownContent a  */ {
   text-decoration: none;
   display: block;
   font-size: 14px;
@@ -95,7 +110,10 @@
   line-height: 14px;
 }
 
-.dropdownContent a:hover {
+/* .dropdownContent a:hover  */
+.typeDropdownContent a:hover,
+.distanceDropdownContent a:hover,
+.categoryDropdownContent a:hover {
   background-color: #000000;
   color: white;
 }
@@ -325,7 +343,10 @@
     gap: 10px;
   }
 
-  .dropdownButton {
+  /* .dropdownButton */
+  .typeDropdownBtn,
+  .distanceDropdownBtn,
+  .categoryDropdownBtn {
     gap: 5px;
     padding: 8px;
   }

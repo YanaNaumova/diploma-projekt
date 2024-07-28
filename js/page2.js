@@ -6,23 +6,63 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //Select
-  const dropdownButtons = document.querySelectorAll(".dropdownButton");
+  // const dropdownButtons = document.querySelectorAll(".dropdownButton");
 
-  dropdownButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      btn.parentElement.lastElementChild.classList.toggle("show");
-      Array.from(btn.parentElement.lastElementChild.children).forEach(
-        (item) => {
-          if (btn.parentElement.lastElementChild.classList.contains("show")) {
-            item.addEventListener("click", (event) => {
-              btn.parentElement.lastElementChild.classList.remove("show");
-              btn.firstElementChild.textContent = event.target.textContent;
-            });
-          }
-        }
-      );
-    });
+  // dropdownButtons.forEach((btn) => {
+  //   btn.addEventListener("click", () => {
+  //     btn.parentElement.lastElementChild.classList.toggle("show");
+  //     Array.from(btn.parentElement.lastElementChild.children).forEach(
+  //       (item) => {
+  //         if (btn.parentElement.lastElementChild.classList.contains("show")) {
+  //           item.addEventListener("click", (event) => {
+  //             btn.parentElement.lastElementChild.classList.remove("show");
+  //             btn.firstElementChild.textContent = event.target.textContent;
+  //           });
+  //         }
+  //       }
+  //     );
+  //   });
+  // });
+
+  const typeDropdownBtn = document.querySelector(".typeDropdownBtn");
+  const typeDropdownContent = document.querySelector(".typeDropdownContent");
+  const typeSelectText = document.querySelector(".typeSelectText");
+
+  const distanceDropdownBtn = document.querySelector(".distanceDropdownBtn");
+  const distanceDropdownContent = document.querySelector(
+    ".distanceDropdownContent"
+  );
+  const distanceSelectText = document.querySelector(".distanceSelectText");
+
+  const categoryDropdownBtn = document.querySelector(".categoryDropdownBtn");
+  const categoryDropdownContent = document.querySelector(
+    ".categoryDropdownContent"
+  );
+  const categorySelectText = document.querySelector(".categorySelectText");
+
+  typeDropdownBtn.addEventListener("click", () => {
+    showSelect(typeDropdownContent, typeSelectText, anyTypeSelect);
   });
+
+  distanceDropdownBtn.addEventListener("click", () => {
+    showSelect(distanceDropdownContent, distanceSelectText, distanceSelect);
+  });
+
+  categoryDropdownBtn.addEventListener("click", () => {
+    showSelect(categoryDropdownContent, categorySelectText, categorySelect);
+  });
+
+  function showSelect(element1, element2, callback) {
+    element1.classList.toggle("show");
+
+    Array.from(element1.children).forEach((li) => {
+      li.addEventListener("click", () => {
+        element1.classList.remove("show");
+        element2.textContent = li.textContent;
+        callback(li);
+      });
+    });
+  }
 
   //Mock Data
   const eventsStore = [
@@ -232,21 +272,116 @@ document.addEventListener("DOMContentLoaded", () => {
     element.append(img);
   }
 
+  //create Card
+  function createCard(event, element) {
+    const eventNearNYCard = document.createElement("div");
+    eventNearNYCard.classList.add("eventNearNYCard");
+    element.append(eventNearNYCard);
+    createImage(event, eventNearNYCard);
+
+    createOnlineLabel(event, eventNearNYCard);
+
+    createCardText(event, eventNearNYCard);
+  }
+
   //EventCards
-  function updateEventCards() {
-    eventNearNYCardsContainer.innerHTML = "";
-    eventsStore.forEach((event) => {
-      const eventNearNYCard = document.createElement("div");
-      eventNearNYCard.classList.add("eventNearNYCard");
-      eventNearNYCardsContainer.append(eventNearNYCard);
-      createImage(event, eventNearNYCard);
-
-      createOnlineLabel(event, eventNearNYCard);
-
-      createCardText(event, eventNearNYCard);
+  function updateEventCards(obj) {
+    eventNearNYCardsContainer.textContent = "";
+    obj.forEach((event) => {
+      createCard(event, eventNearNYCardsContainer);
     });
   }
 
-  updateEventCards();
+  function onlineFilter() {
+    //вывести все события у которых type===online
+    return eventsStore.filter((event) => {
+      return event.type === "online";
+    });
+  }
+
+  function offlineFilter() {
+    //вывести все события у которых type===offline
+    return eventsStore.filter((event) => {
+      return event.type === "offline";
+    });
+  }
+
+  function anyTypeFilter() {
+    //вывести все события
+    return eventsStore;
+  }
+
+  function anyTypeSelect(element) {
+    if (element.textContent === "Online") {
+      updateEventCards(onlineFilter());
+    } else if (element.textContent === "Offline") {
+      updateEventCards(offlineFilter());
+    } else {
+      updateEventCards(anyTypeFilter());
+    }
+  }
+
+  function anyDistance() {
+    //вывести все события
+    return eventsStore;
+  }
+
+  function showDistance(km) {
+    const offline = eventsStore.filter((event) => event.type === "offline");
+    switch (km) {
+      case 5:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+      case 10:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+      case 15:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+      case 25:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+      case 50:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+      case 75:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+      case 100:
+        return offline.filter((event) => {
+          return event.distance === km;
+        });
+    }
+  }
+
+  function distanceSelect(element) {
+    if (element.textContent === "Any distance") {
+      updateEventCards(anyDistance());
+    } else {
+      updateEventCards(showDistance(parseInt(element.textContent)));
+    }
+  }
+
+  function categorySelect(element) {
+    updateEventCards(showCategory(element));
+  }
+
+  function showCategory(element) {
+    if (element.textContent === "Any category") {
+      return eventsStore;
+    } else {
+      return eventsStore.filter((event) => {
+        return event.category === element.textContent;
+      });
+    }
+  }
+
+  updateEventCards(eventsStore);
   window.addEventListener("resize", updateEventCards);
 });
