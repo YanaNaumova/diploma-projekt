@@ -6,24 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //Select
-  // const dropdownButtons = document.querySelectorAll(".dropdownButton");
-
-  // dropdownButtons.forEach((btn) => {
-  //   btn.addEventListener("click", () => {
-  //     btn.parentElement.lastElementChild.classList.toggle("show");
-  //     Array.from(btn.parentElement.lastElementChild.children).forEach(
-  //       (item) => {
-  //         if (btn.parentElement.lastElementChild.classList.contains("show")) {
-  //           item.addEventListener("click", (event) => {
-  //             btn.parentElement.lastElementChild.classList.remove("show");
-  //             btn.firstElementChild.textContent = event.target.textContent;
-  //           });
-  //         }
-  //       }
-  //     );
-  //   });
-  // });
-
   const typeDropdownBtn = document.querySelector(".typeDropdownBtn");
   const typeDropdownContent = document.querySelector(".typeDropdownContent");
   const typeSelectText = document.querySelector(".typeSelectText");
@@ -59,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.addEventListener("click", () => {
         element1.classList.remove("show");
         element2.textContent = li.textContent;
-        callback(li);
+        callback();
       });
     });
   }
@@ -131,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://plus.unsplash.com/premium_photo-1679488248784-65a638a3d3fc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "offline",
       category: "Health and Wellbeing",
-      distance: 15,
+      distance: 50,
     },
   ];
 
@@ -292,94 +274,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function onlineFilter() {
-    //вывести все события у которых type===online
+  //filter
+  function superFilter() {
     return eventsStore.filter((event) => {
-      return event.type === "online";
+      const typeMatch =
+        typeSelectText.textContent === "Any type" ||
+        event.type === typeSelectText.textContent;
+      const distanceMatch =
+        distanceSelectText.textContent === "Any distance" ||
+        (event.type === "offline" &&
+          event.distance === parseInt(distanceSelectText.textContent));
+      const categoryMatch =
+        categorySelectText.textContent === "Any category" ||
+        event.category === categorySelectText.textContent;
+
+      return typeMatch && distanceMatch && categoryMatch;
     });
   }
 
-  function offlineFilter() {
-    //вывести все события у которых type===offline
-    return eventsStore.filter((event) => {
-      return event.type === "offline";
-    });
+  function anyTypeSelect() {
+    updateEventCards(superFilter());
   }
 
-  function anyTypeFilter() {
-    //вывести все события
-    return eventsStore;
+  function distanceSelect() {
+    updateEventCards(superFilter());
   }
 
-  function anyTypeSelect(element) {
-    if (element.textContent === "Online") {
-      updateEventCards(onlineFilter());
-    } else if (element.textContent === "Offline") {
-      updateEventCards(offlineFilter());
-    } else {
-      updateEventCards(anyTypeFilter());
-    }
-  }
-
-  function anyDistance() {
-    //вывести все события
-    return eventsStore;
-  }
-
-  function showDistance(km) {
-    const offline = eventsStore.filter((event) => event.type === "offline");
-    switch (km) {
-      case 5:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-      case 10:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-      case 15:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-      case 25:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-      case 50:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-      case 75:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-      case 100:
-        return offline.filter((event) => {
-          return event.distance === km;
-        });
-    }
-  }
-
-  function distanceSelect(element) {
-    if (element.textContent === "Any distance") {
-      updateEventCards(anyDistance());
-    } else {
-      updateEventCards(showDistance(parseInt(element.textContent)));
-    }
-  }
-
-  function categorySelect(element) {
-    updateEventCards(showCategory(element));
-  }
-
-  function showCategory(element) {
-    if (element.textContent === "Any category") {
-      return eventsStore;
-    } else {
-      return eventsStore.filter((event) => {
-        return event.category === element.textContent;
-      });
-    }
+  function categorySelect() {
+    updateEventCards(superFilter());
   }
 
   updateEventCards(eventsStore);
