@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Navigate to the HomePage
   const logo = document.querySelector(".logo");
   logo.addEventListener("click", () => {
-    location.pathname = "/index.html";
+    location.pathname = "./index.html";
   });
 
   //Select
