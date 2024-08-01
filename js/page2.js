@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://images.unsplash.com/photo-1696258686454-60082b2c33e2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "offline",
       attendees: 43,
-      spots: 2,
+      // spots: 2,
       category: "Technology",
       distance: 25,
     },
@@ -223,11 +223,13 @@ document.addEventListener("DOMContentLoaded", () => {
     eventNYHeader.classList.add("eventNYHeader");
     basicEvntNearNYInformation.append(eventNYHeader);
 
-    if (window.innerWidth <= 768) {
-      eventNYHeader.textContent = event.description;
-    } else {
-      eventNYHeader.textContent = event.title;
-    }
+    eventNYHeader.textContent = event.title;
+
+    // if (window.innerWidth <= 768) {
+    //   eventNYHeader.textContent = event.description;
+    // } else {
+    //   eventNYHeader.textContent = event.title;
+    // }
 
     const categoryAndDistanceContainer = document.createElement("div");
     categoryAndDistanceContainer.classList.add("categoryAndDistanceContainer");
@@ -305,5 +307,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   updateEventCards(eventsStore);
-  window.addEventListener("resize", updateEventCards);
+  // window.addEventListener("resize", updateEventCards);
 });
