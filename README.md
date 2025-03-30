@@ -7,4 +7,4 @@ Dies ist mein Abschlussprojekt des JavaScript-Kurses.
 - Über die Schaltfläche **"Join Meetup"** gelangt man zur zweiten Seite mit Filtern zur Auswahl einer Veranstaltung.  
 
 ## Demo  
-[Projekt auf GitHub Pages ansehen](https://yananaumova.github.io/diplona-projekt/)  
+[Projekt auf GitHub Pages ansehen](https://yananaumova.github.io/diploma-projekt/)  
